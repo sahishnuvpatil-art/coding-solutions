@@ -73,8 +73,8 @@ The total is `0 + 0 + 3 = 3.00000`, which is the minimum possible.
 
 **Language:** Java  
 **Runtime:** 43 ms (beats 99.86%)  
-**Memory:** 145.7 MB (beats 78.94%)  
-**Submitted:** 2026-08-09T06:58:12.537Z  
+**Memory:** 146.1 MB (beats 9.75%)  
+**Submitted:** 2026-08-09T06:58:48.786Z  
 
 ```java
 

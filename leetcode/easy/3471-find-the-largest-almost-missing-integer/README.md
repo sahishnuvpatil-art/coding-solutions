@@ -68,8 +68,8 @@ There is no integer that appears in only one subarray of size 1.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 99.30%)  
-**Memory:** 44.5 MB (beats 83.51%)  
-**Submitted:** 2026-08-18T11:51:51.542Z  
+**Memory:** 44.8 MB (beats 71.93%)  
+**Submitted:** 2026-08-18T11:52:03.908Z  
 
 ```java
 class Solution {

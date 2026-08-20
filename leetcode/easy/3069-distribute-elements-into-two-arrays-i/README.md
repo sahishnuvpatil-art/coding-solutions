@@ -53,8 +53,8 @@ Hence, the array result formed by concatenation is [5,3,4,8].
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 98.08%)  
-**Memory:** 46.8 MB (beats 42.79%)  
-**Submitted:** 2026-08-20T01:56:08.644Z  
+**Memory:** 47 MB (beats 12.74%)  
+**Submitted:** 2026-08-20T01:55:49.686Z  
 
 ```java
 class Solution {

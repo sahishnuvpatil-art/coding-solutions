@@ -70,8 +70,8 @@ The difference between their scores is (-22) - 0 = -22.
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 100.00%)  
-**Memory:** 82.9 MB (beats 99.15%)  
-**Submitted:** 2026-08-24T09:02:15.129Z  
+**Memory:** 83.2 MB (beats 93.62%)  
+**Submitted:** 2026-08-24T09:01:26.323Z  
 
 ```java
 class Solution {

@@ -43,7 +43,7 @@ The multiples of `k = 5` are 5, 10, 15, 20... and the smallest multiple missing 
 **Language:** Java  
 **Runtime:** 1 ms (beats 82.00%)  
 **Memory:** 44.9 MB (beats 83.31%)  
-**Submitted:** 2026-08-25T17:05:42.147Z  
+**Submitted:** 2026-08-25T17:05:49.103Z  
 
 ```java
 class Solution {

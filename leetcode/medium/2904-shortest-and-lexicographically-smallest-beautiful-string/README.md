@@ -70,8 +70,8 @@ Explanation: There are no beautiful substrings in this example.
 
 **Language:** Java  
 **Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 44.2 MB (beats 28.86%)  
-**Submitted:** 2026-08-26T16:43:48.525Z  
+**Memory:** 44.3 MB (beats 20.13%)  
+**Submitted:** 2026-08-26T16:44:00.751Z  
 
 ```java
 class Solution {

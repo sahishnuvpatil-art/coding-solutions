@@ -69,9 +69,9 @@ Explanation: There are no beautiful substrings in this example.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 44.3 MB (beats 20.13%)  
-**Submitted:** 2026-08-26T16:44:00.751Z  
+**Runtime:** 2 ms (beats 40.94%)  
+**Memory:** 44.3 MB (beats 28.86%)  
+**Submitted:** 2026-08-26T16:44:08.201Z  
 
 ```java
 class Solution {

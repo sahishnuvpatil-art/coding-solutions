@@ -47,8 +47,8 @@ Output: 4
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 44.8 MB (beats 48.55%)  
-**Submitted:** 2026-08-27T02:50:19.372Z  
+**Memory:** 44.7 MB (beats 66.94%)  
+**Submitted:** 2026-08-27T02:51:14.708Z  
 
 ```java
 class Solution {
@@ -61,9 +61,7 @@ class Solution {
         }else if (nums[i] >= target) {
                 return i;
             }
-        }
-
-     
+      }
         return a+1;
     }
 }

@@ -8,9 +8,7 @@ class Solution {
         }else if (nums[i] >= target) {
                 return i;
             }
-        }
-
-     
+      }
         return a+1;
     }
 }

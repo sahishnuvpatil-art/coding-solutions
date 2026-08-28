@@ -63,9 +63,9 @@ Return the  **lexicographically smallest string**  that is  **both**  a  **palin
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 76.19%)  
-**Memory:** 47.5 MB (beats 33.33%)  
-**Submitted:** 2026-08-28T14:16:30.199Z  
+**Runtime:** 7 ms (beats 66.67%)  
+**Memory:** 47.6 MB (beats 33.33%)  
+**Submitted:** 2026-08-28T14:16:37.067Z  
 
 ```java
 class Solution {

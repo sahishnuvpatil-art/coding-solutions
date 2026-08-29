@@ -60,9 +60,9 @@ Explanation: [1,7,28,19,10] is the lexicographically smallest array we can obtai
 ## Solution
 
 **Language:** Java  
-**Runtime:** 97 ms (beats 50.00%)  
-**Memory:** 209.1 MB (beats 25.76%)  
-**Submitted:** 2026-08-29T16:41:27.557Z  
+**Runtime:** 92 ms (beats 52.27%)  
+**Memory:** 210.5 MB (beats 25.76%)  
+**Submitted:** 2026-08-29T16:41:13.305Z  
 
 ```java
 class Solution {

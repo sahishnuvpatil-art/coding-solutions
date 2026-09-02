@@ -55,9 +55,9 @@ Explanation: You need to reduce multiple spaces between two words to a single sp
 ## Solution
 
 **Language:** Java  
-**Runtime:** 4 ms (beats 93.08%)  
-**Memory:** 44 MB (beats 91.89%)  
-**Submitted:** 2026-09-02T04:16:38.405Z  
+**Runtime:** 3 ms (beats 99.12%)  
+**Memory:** 43.9 MB (beats 94.98%)  
+**Submitted:** 2026-09-02T04:17:16.853Z  
 
 ```java
 class Solution {

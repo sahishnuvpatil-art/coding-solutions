@@ -4,11 +4,11 @@ class Solution {
         int count=0;
         int maxCount=0;
 
-        for(int i=0;i<l;i++){
+        for(int n:nums ){
             
             
 
-         if(nums[i]==1){
+         if(n==1){
             count++;
          }else{
             count=0;
@@ -16,6 +16,7 @@ class Solution {
          if(maxCount<count){
                 maxCount=count;
          }
+        
         }
         
         return maxCount;

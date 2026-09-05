@@ -36,8 +36,8 @@ Output: 2
 
 **Language:** Java  
 **Runtime:** 2 ms (beats 98.27%)  
-**Memory:** 52.7 MB (beats 26.34%)  
-**Submitted:** 2026-09-05T02:33:45.588Z  
+**Memory:** 52.5 MB (beats 66.31%)  
+**Submitted:** 2026-09-05T02:42:35.167Z  
 
 ```java
 class Solution {
@@ -46,11 +46,11 @@ class Solution {
         int count=0;
         int maxCount=0;
 
-        for(int i=0;i<l;i++){
+        for(int n:nums ){
             
             
 
-         if(nums[i]==1){
+         if(n==1){
             count++;
          }else{
             count=0;
@@ -58,6 +58,7 @@ class Solution {
          if(maxCount<count){
                 maxCount=count;
          }
+        
         }
         
         return maxCount;

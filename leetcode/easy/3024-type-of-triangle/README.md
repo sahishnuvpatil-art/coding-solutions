@@ -1,0 +1,70 @@
+# Type of Triangle
+
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+
+## Problem
+
+You are given a  **0-indexed**  integer array `nums` of size `3` which can form the sides of a triangle.
+
+- A triangle is called equilateral if it has all sides of equal length.
+- A triangle is called isosceles if it has exactly two sides of equal length.
+- A triangle is called scalene if all its sides are of different lengths.
+
+Return  *a string representing*   *the type of triangle that can be formed  **or* `"none"` *if it** cannot** form a triangle.* 
+
+ 
+
+ **Example 1:** 
+
+```
+Input: nums = [3,3,3]
+Output: "equilateral"
+Explanation: Since all the sides are of equal length, therefore, it will form an equilateral triangle.
+
+```
+
+ **Example 2:** 
+
+```
+Input: nums = [3,4,5]
+Output: "scalene"
+Explanation: 
+nums[0] + nums[1] = 3 + 4 = 7, which is greater than nums[2] = 5.
+nums[0] + nums[2] = 3 + 5 = 8, which is greater than nums[1] = 4.
+nums[1] + nums[2] = 4 + 5 = 9, which is greater than nums[0] = 3. 
+Since the sum of the two sides is greater than the third side for all three cases, therefore, it can form a triangle.
+As all the sides are of different lengths, it will form a scalene triangle.
+
+```
+
+ 
+
+ **Constraints:** 
+
+- nums.length == 3
+- 1 <= nums[i] <= 100
+
+## Solution
+
+**Language:** Java  
+**Runtime:** 0 ms  
+**Memory:** 42 MB  
+**Submitted:** 2026-09-07T16:39:10.055Z  
+
+```java
+class Solution {
+    public String triangleType(int[] nums) {
+        int count =0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]==nums[i-1])count++;
+        }
+        if(count>2)return "equilateral";
+        else if(count>1)return "isosceles";
+        else return "scalene";
+    }
+}
+```
+
+---
+
+[View on LeetCode](https://leetcode.com/problems/type-of-triangle/)

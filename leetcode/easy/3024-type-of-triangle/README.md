@@ -47,20 +47,25 @@ As all the sides are of different lengths, it will form a scalene triangle.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42 MB  
-**Submitted:** 2026-09-07T16:39:10.055Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 43.6 MB (beats 85.50%)  
+**Submitted:** 2026-09-07T16:52:39.654Z  
 
 ```java
 class Solution {
     public String triangleType(int[] nums) {
-        int count =0;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]==nums[i-1])count++;
+        int a = nums[0], b = nums[1], c = nums[2];
+       if(a+b<=c || b+c<=a || a+c<=b){
+        return "none";
+       }
+       
+        if (a == b && b == c) {
+            return "equilateral";
+        } else if (a == b || b == c || a == c) {
+            return "isosceles";
+        } else {
+            return "scalene";
         }
-        if(count>2)return "equilateral";
-        else if(count>1)return "isosceles";
-        else return "scalene";
     }
 }
 ```

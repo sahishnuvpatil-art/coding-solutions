@@ -44,39 +44,36 @@ Explanation: We can use baskets 1 and 1000000000.
 
 **Language:** Java  
 **Runtime:** 46 ms (beats 70.94%)  
-**Memory:** 78.5 MB (beats 99.05%)  
-**Submitted:** 2026-09-07T04:20:39.615Z  
+**Memory:** 79.3 MB (beats 10.05%)  
+**Submitted:** 2026-09-07T04:39:31.758Z  
 
 ```java
 class Solution {
     public int maxDistance(int[] arr, int k) {
         Arrays.sort(arr);
-       int low=1;
-       int high=(arr[arr.length-1]-arr[0]);
-    
-       int ans=0;
-       while(low<=high){
-           int mid=low+(high-low)/2;
-           if(canPlace(arr,k,mid)){
-               ans=mid;
+        int low=1;
+        int high=(arr[arr.length-1]-arr[0]);
+        int ans=0;
+        while(low<=high){
+            int mid=low+(high-low)/2;
+            if(canplace(arr,k,mid)){
+                ans=mid;
                low=mid+1;
-           }else{
-               high=mid-1;
-           }
-          
-       }
+
+            }else{
+                high=mid-1;
+            }
+        }
         return ans;
     }
-    private boolean canPlace(int []arr,int k , int dist){
+    private boolean canplace(int []arr,int k , int dist){
         int cows=1;
-        int prevCow=arr[0];
+        int prev=arr[0];
         for(int i=1;i<arr.length;i++){
-            if(arr[i]-prevCow>=dist){
+            if(arr[i]-prev>=dist){
                 cows++;
-                prevCow=arr[i];
-                
+                prev=arr[i];
             }
-           
         }
         if(cows>=k)return true;
         else return false;

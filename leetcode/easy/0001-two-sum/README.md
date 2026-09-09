@@ -53,13 +53,14 @@ Output: [0,1]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 47 ms (beats 9.92%)  
-**Memory:** 46.9 MB (beats 74.19%)  
-**Submitted:** 2026-09-09T03:14:15.026Z  
+**Runtime:** 45 ms (beats 26.96%)  
+**Memory:** 47 MB (beats 74.19%)  
+**Submitted:** 2026-09-09T03:15:30.652Z  
 
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        
         for(int i=0;i<nums.length;i++){
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]+nums[j]==target){

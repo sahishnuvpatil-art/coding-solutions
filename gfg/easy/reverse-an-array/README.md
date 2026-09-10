@@ -1,10 +1,10 @@
-# Reverse an Array
+# Reverse Array
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
 
 ## Problem
 
-You are given an array of integers  **arr[]**. You have to  **reverse**  the given array.
+You are given an array of integers  **arr[]**. You have to reverse the given array.
 
  **Note:** Modify the array in place.
 
@@ -30,41 +30,28 @@ Output: [1]
 Explanation: The array has only single element, hence the reversed array is same as the original.
 ```
 
-**Constraints:
-**1 ≤ arr.size() ≤ 105
-0 ≤ arr[i] ≤ 105
-
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T07:31:57.300Z  
+**Submitted:** 2026-09-10T04:36:30.150Z  
 
 ```java
-// by sahishnu patil 
-//on 14 aug 26 at 13:01
-
-
 class Solution {
-    
-   
-    void f(int i, int arr[], int n) {
-        if (i >= n / 2) return;   
-    
-        int temp = arr[i];
-        arr[i] = arr[n - i - 1];
-        arr[n - i - 1] = temp;
-        
-       
-        f(i + 1, arr, n);
-    }
-    
     public void reverseArray(int arr[]) {
-        f(0, arr, arr.length);
+        int i =0;
+        int j=arr.length-1;
+        while(i<j){
+           int temp=arr[i];
+            arr[i]=arr[j];
+           arr[j]=temp;
+          i++;
+          j--;
+        }
+       
     }
 }
-
 ```
 
 ---

@@ -54,9 +54,9 @@ Thus, the result should be [1,0].
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-09-11T04:41:15.231Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 42.8 MB (beats 99.24%)  
+**Submitted:** 2026-09-11T04:41:20.998Z  
 
 ```java
 class Solution {

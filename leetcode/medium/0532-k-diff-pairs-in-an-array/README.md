@@ -56,8 +56,8 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
 
 **Language:** Java  
 **Runtime:** 11 ms (beats 69.14%)  
-**Memory:** 46.7 MB (beats 45.82%)  
-**Submitted:** 2026-09-12T03:26:44.997Z  
+**Memory:** 46.6 MB (beats 57.02%)  
+**Submitted:** 2026-09-12T03:27:08.158Z  
 
 ```java
 import java.util.*;

@@ -14,10 +14,9 @@ class Codechef
           st[i]=sc.nextInt();
       }
       Arrays.sort(st);
-      int one=st[0];
-      int last=st[st.length-1];
-      int ot=(one+last)/2;
-      System.out.print(ot);
+      for(int i=0;i<n;i++){
+          System.out
+      }
 
 	}
 }

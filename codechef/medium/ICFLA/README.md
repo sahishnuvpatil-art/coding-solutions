@@ -47,7 +47,7 @@ Therefore, the minimum number of balls required is  **4**.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T15:13:57.201Z  
+**Submitted:** 2026-09-14T15:15:55.197Z  
 
 ```java
 import java.util.*;

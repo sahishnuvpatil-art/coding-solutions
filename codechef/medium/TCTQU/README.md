@@ -68,7 +68,7 @@ The target person finally completes their service at time  **9**.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T15:08:49.644Z  
+**Submitted:** 2026-09-14T15:10:23.660Z  
 
 ```java
 import java.util.*;

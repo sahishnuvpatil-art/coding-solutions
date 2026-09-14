@@ -7,7 +7,13 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
       Scanner sc=new Scanner (System.in);
-      int 
+      int n=sc.nextInt();
+      int []st=new int[n];
+      Arrays.sort(st);
+      int one=st[0];
+      int last=st[st.length-1];
+      int ot=(one+last)/2;
+      System.out.print(ot);
 
 	}
 }

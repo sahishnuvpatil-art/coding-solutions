@@ -47,7 +47,7 @@ Therefore, the minimum number of balls required is  **4**.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T15:15:55.197Z  
+**Submitted:** 2026-09-14T15:17:03.257Z  
 
 ```java
 import java.util.*;
@@ -58,10 +58,22 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
+		
+        Scanner sc = new Scanner(System.in);
 
-	}
+        long n = sc.nextLong();
+
+        long bhalu = 1;
+
+        while (bhalu * (bhalu - 1) / 2 < n) {
+            bhalu++;
+        }
+
+        System.out.println(bhalu);
+    }
 }
+
+	
 
 ```
 

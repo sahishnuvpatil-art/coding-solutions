@@ -66,7 +66,7 @@ Seats $3$ and $7$ are both $2$ units away from the center. Choose seat $3$ becau
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:49:17.274Z  
+**Submitted:** 2026-09-14T14:50:21.024Z  
 
 ```java
 import java.util.*;
@@ -85,10 +85,9 @@ class Codechef
           st[i]=sc.nextInt();
       }
       Arrays.sort(st);
-      int one=st[0];
-      int last=st[st.length-1];
-      int ot=(one+last)/2;
-      System.out.print(ot);
+      for(int i=0;i<n;i++){
+          System.out
+      }
 
 	}
 }

@@ -42,30 +42,18 @@ Output: 2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 42.9 MB  
-**Submitted:** 2026-09-15T03:16:48.414Z  
+**Runtime:** 7 ms (beats 44.97%)  
+**Memory:** 63.1 MB (beats 7.20%)  
+**Submitted:** 2026-09-15T03:18:19.959Z  
 
 ```java
 class Solution {
     public int majorityElement(int[] nums) {
-         int l=nums.length;
-        int newl=0;
-        int ans=0;
-        if(l%2==0){
-          newl=l/2;
-        }else{
-            newl=(l/2);
-        }
-        Arrays.sort(nums);
-        if(nums[l-1]==nums[newl]){
-           ans=nums[l-1];
-
-        }else{
-            ans=nums[0];
-        }
-        ans=ans*1;
-        return ans;
+         int l=nums.length/2;
+         Arrays.sort(nums);
+         int ans=nums[l];
+         return ans;
+        
     }
 }
 ```

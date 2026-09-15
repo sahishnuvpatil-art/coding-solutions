@@ -39,8 +39,8 @@ Bolded numbers were flipped from 0 to 1. The longest subarray is underlined.
 
 **Language:** Java  
 **Runtime:** 3 ms (beats 95.87%)  
-**Memory:** 51.9 MB (beats 88.16%)  
-**Submitted:** 2026-09-15T04:48:04.558Z  
+**Memory:** 52.2 MB (beats 54.65%)  
+**Submitted:** 2026-09-15T05:03:16.484Z  
 
 ```java
 class Solution {
@@ -49,24 +49,16 @@ class Solution {
         int max = 0;     
         int left = 0;    
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) {
-                count++;
-            }
+       for(int i=0;i<nums.length;i++){
+        if(nums[i]==0)count++;
 
-           
-            while (count > k) {
-                if (nums[left] == 0) {
-                    count--;
-                }
-                left++;
-            }
-
-           
-            max = Math.max(max, i - left + 1);
+        while(count>k){
+            if(nums[left]==0)count--;
+            left++;
         }
-
-        return max;
+        max=Math.max(max,i-left+1);
+       }
+       return max;
     }
 }
 

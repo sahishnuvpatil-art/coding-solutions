@@ -7,12 +7,12 @@ class Solution {
        while(left<=right){
         if(people[left]+people[right]<=limit){
             left++;
-            right--;
            
-        }else {
+           
+        }
             right--;
 
-        }
+        
         bc++;
        }
        

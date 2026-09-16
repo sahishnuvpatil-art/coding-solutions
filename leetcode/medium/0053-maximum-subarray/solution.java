@@ -8,9 +8,8 @@ class Solution {
                 currmax+=nums[i];
             }else{
                 currmax=nums[i];
-            }if(max<currmax){
-                max=currmax;
-                            }
+            }
+            max=Math.max(max,currmax);
         }
         return max;
     }

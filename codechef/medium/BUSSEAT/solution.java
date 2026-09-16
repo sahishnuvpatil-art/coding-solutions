@@ -8,9 +8,15 @@ class Codechef
 	
 	{
 	    Scanner sc=new Scanner(System.in);
+	    int t=sc.nextInt();
 	   while(t-->0){
 	       int n=sc.nextInt();
 	       int k=sc.nextInt();
+	       if(n*2==k)System.out.println(k);
+	       else(n>=k)System.out.println("0");
+	       int num=0;
+	       
+	       
 	   }
 
 	}

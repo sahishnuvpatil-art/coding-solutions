@@ -55,7 +55,7 @@ Yes
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:28:33.644Z  
+**Submitted:** 2026-09-16T15:28:47.930Z  
 
 ```java
 import java.util.*;
@@ -71,7 +71,7 @@ class Codechef
 
         int t = sc.nextInt();
 
-        while (T-- > 0) {
+        while (t-- > 0) {
             int n = sc.nextInt();
             int k = sc.nextInt();
 

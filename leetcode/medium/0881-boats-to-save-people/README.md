@@ -48,32 +48,29 @@ Explanation: 4 boats (3), (3), (4), (5)
 
 **Language:** Java  
 **Runtime:** 20 ms (beats 81.75%)  
-**Memory:** 56.8 MB (beats 9.17%)  
-**Submitted:** 2026-09-16T04:23:57.317Z  
+**Memory:** 56.6 MB (beats 21.09%)  
+**Submitted:** 2026-09-16T04:31:46.749Z  
 
 ```java
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
         Arrays.sort(people);
-       int bc=0;
-       int left=0;
-       int right=people.length-1;
-       while(left<=right){
-        if(people[left]+people[right]<=limit){
-            left++;
-           
-           
-        }
+        int bc=0;
+        int left=0;
+        int right=people.length-1;
+
+        while(left<=right) {
+            if(people[left]+people[right]<=limit) {
+                left++;
+            }
+
             right--;
+            bc++;
+        }
 
-        
-        bc++;
-       }
-       
+        return bc;
 
-       return bc;
 
-          
     }
 }
 ```

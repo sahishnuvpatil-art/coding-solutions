@@ -7,90 +7,60 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		
+        Scanner sc = new Scanner(System.in);
 
-        Scanner portalOfInfiniteKnowledge = new Scanner(System.in);
+        int testCases = sc.nextInt();
 
-        int numberOfTimelines = portalOfInfiniteKnowledge.nextInt();
+        while (testCases-- > 0) {
 
-        while (numberOfTimelines-- > 0) {
+            int n = sc.nextInt();
+            int[] nums = new int[n];
 
-            int lengthOfTheSacredPermutation =
-                    portalOfInfiniteKnowledge.nextInt();
-
-            int[] armyOfNumericalWarriors =
-                    new int[lengthOfTheSacredPermutation];
-
-            for (int identityOfTheCurrentlyArrivingWarrior = 0;
-                 identityOfTheCurrentlyArrivingWarrior
-                         < lengthOfTheSacredPermutation;
-                 identityOfTheCurrentlyArrivingWarrior++) {
-
-                armyOfNumericalWarriors[
-                        identityOfTheCurrentlyArrivingWarrior
-                ] = portalOfInfiniteKnowledge.nextInt();
+            for (int i = 0; i < n; i++) {
+                nums[i] = sc.nextInt();
             }
 
-            for (int battlefieldStartingPoint = 0;
-                 battlefieldStartingPoint < lengthOfTheSacredPermutation;
-                 battlefieldStartingPoint++) {
+            for (int start = 0; start < n; start++) {
 
-                int locationOfTheChosenChampion = battlefieldStartingPoint;
+                int best = start;
 
-                for (int wanderingWarrior = battlefieldStartingPoint;
-                     wanderingWarrior < lengthOfTheSacredPermutation;
-                     wanderingWarrior++) {
+                for (int current = start + 1; current < n; current++) {
 
-                    boolean permissionToInvadeTheLeftSide = true;
+                    // Check if nums[current] can reach start
+                    boolean possible = true;
 
-                    for (int guardianOfTheCurrentTerritory = battlefieldStartingPoint;
-                         guardianOfTheCurrentTerritory < wanderingWarrior;
-                         guardianOfTheCurrentTerritory++) {
+                    for (int position = current - 1;
+                         position >= start;
+                         position--) {
 
-                        if (Math.abs(
-                                armyOfNumericalWarriors[wanderingWarrior]
-                                - armyOfNumericalWarriors[guardianOfTheCurrentTerritory]
-                            ) <= 1) {
-
-                            permissionToInvadeTheLeftSide = false;
+                        if (Math.abs(nums[current] - nums[position]) <= 1) {
+                            possible = false;
                             break;
                         }
                     }
 
-                    if (permissionToInvadeTheLeftSide &&
-                        armyOfNumericalWarriors[wanderingWarrior]
-                        < armyOfNumericalWarriors[locationOfTheChosenChampion]) {
-
-                        locationOfTheChosenChampion = wanderingWarrior;
+                    if (possible && nums[current] < nums[best]) {
+                        best = current;
                     }
                 }
 
-                int treasureCarriedByTheChosenChampion =
-                        armyOfNumericalWarriors[locationOfTheChosenChampion];
+                int chosen = nums[best];
 
-                for (int backwardsMarch = locationOfTheChosenChampion;
-                     backwardsMarch > battlefieldStartingPoint;
-                     backwardsMarch--) {
-
-                    armyOfNumericalWarriors[backwardsMarch] =
-                            armyOfNumericalWarriors[backwardsMarch - 1];
+                for (int position = best; position > start; position--) {
+                    nums[position] = nums[position - 1];
                 }
 
-                armyOfNumericalWarriors[battlefieldStartingPoint] =
-                        treasureCarriedByTheChosenChampion;
+                nums[start] = chosen;
             }
 
-            for (int finalVictoryPosition = 0;
-                 finalVictoryPosition < lengthOfTheSacredPermutation;
-                 finalVictoryPosition++) {
-
-                System.out.print(
-                        armyOfNumericalWarriors[finalVictoryPosition] + " "
-                );
+            for (int i = 0; i < n; i++) {
+                System.out.print(nums[i] + " ");
             }
 
             System.out.println();
         }
 
+      
 
 	}
 }

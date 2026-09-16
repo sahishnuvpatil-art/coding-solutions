@@ -11,11 +11,11 @@ class Codechef
 	int b=sc.nextInt();
 	int cookies=0;
     if((a+b)%2!=0){
-        return -1;
+        System.out.println("-1");;
     }else{
        cookies=(a-b)/2;
        
     }
-    return cookies;
+    System.out.println(cookies);
 	}
 }

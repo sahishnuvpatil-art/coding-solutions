@@ -50,10 +50,6 @@ class Codechef
             System.out.println(answer);
         }
 
-        sc.close();
+        
     }
-}
-
-       
-	}
 }

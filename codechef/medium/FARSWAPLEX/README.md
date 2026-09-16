@@ -56,7 +56,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:59:29.883Z  
+**Submitted:** 2026-09-16T16:02:02.706Z  
 
 ```java
 import java.util.*;
@@ -67,62 +67,70 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		
-        Scanner sc = new Scanner(System.in);
 
-        int testCases = sc.nextInt();
 
-        while (testCases-- > 0) {
+        Scanner input = new Scanner(System.in);
 
-            int n = sc.nextInt();
-            int[] nums = new int[n];
+        int cases = input.nextInt();
 
-            for (int i = 0; i < n; i++) {
-                nums[i] = sc.nextInt();
+        while (cases-- > 0) {
+
+            int size = input.nextInt();
+            int[] lineup = new int[size];
+            int[] spot = new int[size + 1];
+
+            for (int place = 0; place < size; place++) {
+                lineup[place] = input.nextInt();
+                spot[lineup[place]] = place;
             }
 
-            for (int start = 0; start < n; start++) {
+            ArrayList<Integer>[] rules = new ArrayList[size + 1];
 
-                int best = start;
-
-                for (int current = start + 1; current < n; current++) {
-
-                    // Check if nums[current] can reach start
-                    boolean possible = true;
-
-                    for (int position = current - 1;
-                         position >= start;
-                         position--) {
-
-                        if (Math.abs(nums[current] - nums[position]) <= 1) {
-                            possible = false;
-                            break;
-                        }
-                    }
-
-                    if (possible && nums[current] < nums[best]) {
-                        best = current;
-                    }
-                }
-
-                int chosen = nums[best];
-
-                for (int position = best; position > start; position--) {
-                    nums[position] = nums[position - 1];
-                }
-
-                nums[start] = chosen;
+            for (int number = 1; number <= size; number++) {
+                rules[number] = new ArrayList<>();
             }
 
-            for (int i = 0; i < n; i++) {
-                System.out.print(nums[i] + " ");
+            int[] blockers = new int[size + 1];
+
+            for (int number = 1; number < size; number++) {
+
+                if (spot[number] < spot[number + 1]) {
+                    rules[number].add(number + 1);
+                    blockers[number + 1]++;
+                } else {
+                    rules[number + 1].add(number);
+                    blockers[number]++;
+                }
+            }
+
+            PriorityQueue<Integer> choices = new PriorityQueue<>();
+
+            for (int number = 1; number <= size; number++) {
+                if (blockers[number] == 0) {
+                    choices.add(number);
+                }
+            }
+
+            while (!choices.isEmpty()) {
+
+                int winner = choices.poll();
+
+                System.out.print(winner + " ");
+
+                for (int follower : rules[winner]) {
+
+                    blockers[follower]--;
+
+                    if (blockers[follower] == 0) {
+                        choices.add(follower);
+                    }
+                }
             }
 
             System.out.println();
         }
 
-      
-
+        
 	}
 }
 

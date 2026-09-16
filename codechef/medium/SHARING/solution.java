@@ -14,8 +14,8 @@ class Codechef
         System.out.println("-1");;
     }else{
        cookies=(a-b)/2;
-       
+       System.out.println(cookies);
     }
-    System.out.println(cookies);
+    
 	}
 }

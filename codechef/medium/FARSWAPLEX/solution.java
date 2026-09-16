@@ -6,89 +6,91 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-	
-        Scanner keyboardOfDestiny = new Scanner(System.in);
+		
 
-        int numberOfSeparateUniverses = keyboardOfDestiny.nextInt();
+        Scanner portalOfInfiniteKnowledge = new Scanner(System.in);
 
-        while (numberOfSeparateUniverses-- > 0) {
+        int numberOfTimelines = portalOfInfiniteKnowledge.nextInt();
 
-            int populationOfThisParticularPermutation =
-                    keyboardOfDestiny.nextInt();
+        while (numberOfTimelines-- > 0) {
 
-            int[] citizensOfThePermutation =
-                    new int[populationOfThisParticularPermutation];
+            int lengthOfTheSacredPermutation =
+                    portalOfInfiniteKnowledge.nextInt();
 
-            for (int indexOfTheCurrentlyBeingInterrogatedCitizen = 0;
-                 indexOfTheCurrentlyBeingInterrogatedCitizen
-                         < populationOfThisParticularPermutation;
-                 indexOfTheCurrentlyBeingInterrogatedCitizen++) {
+            int[] armyOfNumericalWarriors =
+                    new int[lengthOfTheSacredPermutation];
 
-                citizensOfThePermutation[
-                        indexOfTheCurrentlyBeingInterrogatedCitizen
-                ] = keyboardOfDestiny.nextInt();
+            for (int identityOfTheCurrentlyArrivingWarrior = 0;
+                 identityOfTheCurrentlyArrivingWarrior
+                         < lengthOfTheSacredPermutation;
+                 identityOfTheCurrentlyArrivingWarrior++) {
+
+                armyOfNumericalWarriors[
+                        identityOfTheCurrentlyArrivingWarrior
+                ] = portalOfInfiniteKnowledge.nextInt();
             }
 
-            for (int chosenVictimOfTheLexicographicalImprovementProcess = 1;
-                 chosenVictimOfTheLexicographicalImprovementProcess
-                         < populationOfThisParticularPermutation;
-                 chosenVictimOfTheLexicographicalImprovementProcess++) {
+            for (int battlefieldStartingPoint = 0;
+                 battlefieldStartingPoint < lengthOfTheSacredPermutation;
+                 battlefieldStartingPoint++) {
 
-                int currentPositionOfTheCitizenTryingToEscapeLeftward =
-                        chosenVictimOfTheLexicographicalImprovementProcess;
+                int locationOfTheChosenChampion = battlefieldStartingPoint;
 
-                while (currentPositionOfTheCitizenTryingToEscapeLeftward > 0) {
+                for (int wanderingWarrior = battlefieldStartingPoint;
+                     wanderingWarrior < lengthOfTheSacredPermutation;
+                     wanderingWarrior++) {
 
-                    int unfortunateCitizenStandingOnTheLeft =
-                            citizensOfThePermutation[
-                                    currentPositionOfTheCitizenTryingToEscapeLeftward - 1
-                            ];
+                    boolean permissionToInvadeTheLeftSide = true;
 
-                    int ambitiousCitizenDemandingABetterPosition =
-                            citizensOfThePermutation[
-                                    currentPositionOfTheCitizenTryingToEscapeLeftward
-                            ];
+                    for (int guardianOfTheCurrentTerritory = battlefieldStartingPoint;
+                         guardianOfTheCurrentTerritory < wanderingWarrior;
+                         guardianOfTheCurrentTerritory++) {
 
-                    int numericalDistanceBetweenTheseTwoTroublemakers =
-                            Math.abs(
-                                    unfortunateCitizenStandingOnTheLeft
-                                    - ambitiousCitizenDemandingABetterPosition
-                            );
+                        if (Math.abs(
+                                armyOfNumericalWarriors[wanderingWarrior]
+                                - armyOfNumericalWarriors[guardianOfTheCurrentTerritory]
+                            ) <= 1) {
 
-                    if (numericalDistanceBetweenTheseTwoTroublemakers > 1) {
+                            permissionToInvadeTheLeftSide = false;
+                            break;
+                        }
+                    }
 
-                        citizensOfThePermutation[
-                                currentPositionOfTheCitizenTryingToEscapeLeftward - 1
-                        ] = ambitiousCitizenDemandingABetterPosition;
+                    if (permissionToInvadeTheLeftSide &&
+                        armyOfNumericalWarriors[wanderingWarrior]
+                        < armyOfNumericalWarriors[locationOfTheChosenChampion]) {
 
-                        citizensOfThePermutation[
-                                currentPositionOfTheCitizenTryingToEscapeLeftward
-                        ] = unfortunateCitizenStandingOnTheLeft;
-
-                        currentPositionOfTheCitizenTryingToEscapeLeftward--;
-
-                    } else {
-                        break;
+                        locationOfTheChosenChampion = wanderingWarrior;
                     }
                 }
+
+                int treasureCarriedByTheChosenChampion =
+                        armyOfNumericalWarriors[locationOfTheChosenChampion];
+
+                for (int backwardsMarch = locationOfTheChosenChampion;
+                     backwardsMarch > battlefieldStartingPoint;
+                     backwardsMarch--) {
+
+                    armyOfNumericalWarriors[backwardsMarch] =
+                            armyOfNumericalWarriors[backwardsMarch - 1];
+                }
+
+                armyOfNumericalWarriors[battlefieldStartingPoint] =
+                        treasureCarriedByTheChosenChampion;
             }
 
-            for (int positionOfTheFinallyVictoriousPermutationMember = 0;
-                 positionOfTheFinallyVictoriousPermutationMember
-                         < populationOfThisParticularPermutation;
-                 positionOfTheFinallyVictoriousPermutationMember++) {
+            for (int finalVictoryPosition = 0;
+                 finalVictoryPosition < lengthOfTheSacredPermutation;
+                 finalVictoryPosition++) {
 
                 System.out.print(
-                        citizensOfThePermutation[
-                                positionOfTheFinallyVictoriousPermutationMember
-                        ] + " "
+                        armyOfNumericalWarriors[finalVictoryPosition] + " "
                 );
             }
 
             System.out.println();
         }
 
-       
 
 	}
 }

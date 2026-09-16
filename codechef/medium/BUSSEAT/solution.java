@@ -13,7 +13,7 @@ class Codechef
 	       int n=sc.nextInt();
 	       int k=sc.nextInt();
 	       if(n*2==k)System.out.println(k);
-	       else(n>=k)System.out.println("0");
+	       else if(n>=k)System.out.println("0");
 	       int num=0;
 	       
 	       

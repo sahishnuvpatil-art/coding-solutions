@@ -54,33 +54,31 @@ Hence, persons $1$ and $3$ share a row in this instance, so there are $2$ people
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:21:56.704Z  
+**Submitted:** 2026-09-16T15:24:16.065Z  
 
 ```java
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-class Codechef
-{
-	public static void main (String[] args) throws java.lang.Exception
-	
-	{
-	    Scanner sc=new Scanner(System.in);
-	    int t=sc.nextInt();
-	   while(t-->0){
-	       int n=sc.nextInt();
-	       int k=sc.nextInt();
-	       if(n*2==k)System.out.println(k);
-	       else if(n>=k)System.out.println("0");
-	       int num=0;
-	       
-	       
-	   }
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-	}
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int k = sc.nextInt();
+
+            if (k <= n) {
+                System.out.println(0);
+            } else {
+                System.out.println(2 * (k- n));
+            }
+        }
+
+       
+    }
 }
-
 ```
 
 ---

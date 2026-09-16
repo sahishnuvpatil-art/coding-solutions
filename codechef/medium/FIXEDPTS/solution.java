@@ -11,7 +11,7 @@ class Codechef
 
         int t = sc.nextInt();
 
-        while (T-- > 0) {
+        while (t-- > 0) {
             int n = sc.nextInt();
             int k = sc.nextInt();
 

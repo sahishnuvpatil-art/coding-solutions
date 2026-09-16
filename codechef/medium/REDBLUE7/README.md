@@ -56,7 +56,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:40:10.714Z  
+**Submitted:** 2026-09-16T15:41:44.393Z  
 
 ```java
 import java.util.*;
@@ -111,12 +111,8 @@ class Codechef
             System.out.println(answer);
         }
 
-        sc.close();
+        
     }
-}
-
-       
-	}
 }
 
 ```

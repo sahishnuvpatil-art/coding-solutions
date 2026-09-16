@@ -56,7 +56,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:46:47.143Z  
+**Submitted:** 2026-09-16T15:50:01.482Z  
 
 ```java
 import java.util.*;
@@ -67,7 +67,89 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
+	
+        Scanner keyboardOfDestiny = new Scanner(System.in);
+
+        int numberOfSeparateUniverses = keyboardOfDestiny.nextInt();
+
+        while (numberOfSeparateUniverses-- > 0) {
+
+            int populationOfThisParticularPermutation =
+                    keyboardOfDestiny.nextInt();
+
+            int[] citizensOfThePermutation =
+                    new int[populationOfThisParticularPermutation];
+
+            for (int indexOfTheCurrentlyBeingInterrogatedCitizen = 0;
+                 indexOfTheCurrentlyBeingInterrogatedCitizen
+                         < populationOfThisParticularPermutation;
+                 indexOfTheCurrentlyBeingInterrogatedCitizen++) {
+
+                citizensOfThePermutation[
+                        indexOfTheCurrentlyBeingInterrogatedCitizen
+                ] = keyboardOfDestiny.nextInt();
+            }
+
+            for (int chosenVictimOfTheLexicographicalImprovementProcess = 1;
+                 chosenVictimOfTheLexicographicalImprovementProcess
+                         < populationOfThisParticularPermutation;
+                 chosenVictimOfTheLexicographicalImprovementProcess++) {
+
+                int currentPositionOfTheCitizenTryingToEscapeLeftward =
+                        chosenVictimOfTheLexicographicalImprovementProcess;
+
+                while (currentPositionOfTheCitizenTryingToEscapeLeftward > 0) {
+
+                    int unfortunateCitizenStandingOnTheLeft =
+                            citizensOfThePermutation[
+                                    currentPositionOfTheCitizenTryingToEscapeLeftward - 1
+                            ];
+
+                    int ambitiousCitizenDemandingABetterPosition =
+                            citizensOfThePermutation[
+                                    currentPositionOfTheCitizenTryingToEscapeLeftward
+                            ];
+
+                    int numericalDistanceBetweenTheseTwoTroublemakers =
+                            Math.abs(
+                                    unfortunateCitizenStandingOnTheLeft
+                                    - ambitiousCitizenDemandingABetterPosition
+                            );
+
+                    if (numericalDistanceBetweenTheseTwoTroublemakers > 1) {
+
+                        citizensOfThePermutation[
+                                currentPositionOfTheCitizenTryingToEscapeLeftward - 1
+                        ] = ambitiousCitizenDemandingABetterPosition;
+
+                        citizensOfThePermutation[
+                                currentPositionOfTheCitizenTryingToEscapeLeftward
+                        ] = unfortunateCitizenStandingOnTheLeft;
+
+                        currentPositionOfTheCitizenTryingToEscapeLeftward--;
+
+                    } else {
+                        break;
+                    }
+                }
+            }
+
+            for (int positionOfTheFinallyVictoriousPermutationMember = 0;
+                 positionOfTheFinallyVictoriousPermutationMember
+                         < populationOfThisParticularPermutation;
+                 positionOfTheFinallyVictoriousPermutationMember++) {
+
+                System.out.print(
+                        citizensOfThePermutation[
+                                positionOfTheFinallyVictoriousPermutationMember
+                        ] + " "
+                );
+            }
+
+            System.out.println();
+        }
+
+       
 
 	}
 }

@@ -49,39 +49,32 @@ Output: 23
 ## Solution
 
 **Language:** Java  
-**Runtime:** 8 ms (beats 67.38%)  
-**Memory:** 48.3 MB (beats 15.39%)  
-**Submitted:** 2026-09-03T03:40:59.271Z  
+**Runtime:** 7 ms (beats 83.68%)  
+**Memory:** 47.8 MB (beats 57.64%)  
+**Submitted:** 2026-09-17T03:32:36.513Z  
 
 ```java
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
-        int s=1;
-        int max=-1;
-        for(int i=0;i<piles.length;i++){
-            if(piles[i]>max){
-                max=piles[i];
-            }
-        }
+    int s=1;
+    int max=-1;
+    for(int i=0;i<piles.length;i++){
+        max=Math.max(piles[i],max);
+    } 
+    int e=max;
+    while(s<e){
+        int mid=(s+e)/2;
+     int time=0;
+     for(int i=0;i<piles.length;i++){
+        time+=(piles[i]+mid-1)/mid;
+     }
+        if(time>h){
+            s=mid+1;
+        }else e=mid;
+     
 
-        int e=max;
-
-        while(s<e){
-            int mid=(s+e)/2;
-
-            int time=0;
-            for(int i=0;i<piles.length;i++){
-                time+= (piles[i]+mid-1)/mid;
-            }
-
-            if(time>h){
-                s=mid+1;
-            }
-            else{
-                e=mid;
-            }
-        }
-        return s;
+    }
+    return s;
     }
 }
 ```

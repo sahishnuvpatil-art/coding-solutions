@@ -63,9 +63,9 @@ Explanation:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 64.83%)  
-**Memory:** 50 MB (beats 76.21%)  
-**Submitted:** 2026-09-05T03:42:27.509Z  
+**Runtime:** 11 ms (beats 63.68%)  
+**Memory:** 49.9 MB (beats 87.64%)  
+**Submitted:** 2026-09-17T04:20:11.714Z  
 
 ```java
 class Solution {

@@ -20,15 +20,12 @@ Output: 24
 Explanation: 1 x 2 x 3 x 4 = 24
 ```
 
- **Constraints:** 
-0 ≤ n ≤ 12
-
 ## Solution
 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-14T06:58:48.078Z  
+**Submitted:** 2026-09-18T04:01:39.550Z  
 
 ```java
 class Solution {

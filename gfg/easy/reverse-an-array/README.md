@@ -35,7 +35,7 @@ Explanation: The array has only single element, hence the reversed array is same
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-10T04:36:30.150Z  
+**Submitted:** 2026-09-21T03:16:07.225Z  
 
 ```java
 class Solution {

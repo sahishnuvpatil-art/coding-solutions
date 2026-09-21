@@ -60,7 +60,7 @@ isFull(): Return true as the stack is full. Capacity = 1.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T02:47:55.621Z  
+**Submitted:** 2026-09-21T02:48:55.402Z  
 
 ```java
 class myStack {

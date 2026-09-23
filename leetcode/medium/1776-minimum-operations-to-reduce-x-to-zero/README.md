@@ -48,8 +48,8 @@ Explanation: The optimal solution is to remove the last three elements and the f
 
 **Language:** Java  
 **Runtime:** 4 ms (beats 98.07%)  
-**Memory:** 102.1 MB (beats 59.92%)  
-**Submitted:** 2026-09-23T17:21:52.433Z  
+**Memory:** 102.1 MB (beats 44.57%)  
+**Submitted:** 2026-09-23T17:24:42.471Z  
 
 ```java
 class Solution {

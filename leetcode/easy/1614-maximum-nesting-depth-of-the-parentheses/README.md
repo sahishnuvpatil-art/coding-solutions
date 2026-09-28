@@ -45,9 +45,9 @@ Digit 3 is inside of 3 nested parentheses in the string.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 43.1 MB (beats 15.94%)  
-**Submitted:** 2026-09-28T02:31:44.033Z  
+**Runtime:** 1 ms (beats 21.46%)  
+**Memory:** 42.8 MB (beats 69.63%)  
+**Submitted:** 2026-09-28T04:52:20.645Z  
 
 ```java
 class Solution {

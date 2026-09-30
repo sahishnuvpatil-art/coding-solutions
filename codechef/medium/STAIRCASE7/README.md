@@ -58,7 +58,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:36:32.039Z  
+**Submitted:** 2026-09-30T15:36:53.347Z  
 
 ```java
 import java.util.*;
@@ -69,10 +69,6 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		import java.util.*;
-
-public class staircase {
-    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
@@ -98,10 +94,6 @@ public class staircase {
         }
         sc.close();
     }
-}
-
-
-	}
 }
 
 ```

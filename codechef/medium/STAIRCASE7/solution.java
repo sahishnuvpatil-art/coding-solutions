@@ -6,8 +6,8 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+		Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();  
         while (t-- > 0) {
             int n = sc.nextInt();
             int[] a = new int[n];
@@ -15,20 +15,30 @@ class Codechef
                 a[i] = sc.nextInt();
             }
 
-            Map<Integer, Integer> mp = new HashMap<>();
+          
+            int[] b = new int[n];
             for (int i = 0; i < n; i++) {
-                int val = a[i] - i;
-                mp.put(val, mp.getOrDefault(val, 0) + 1);
+                b[i] = a[i] - i;
             }
 
-            int mx = 0;
-            for (int c : mp.values()) {
-                if (c > mx) mx = c;
+            
+            int max = 0;
+            for (int i = 0; i < n; i++) {
+                int count = 0;
+                for (int j = 0; j < n; j++) {
+                    if (b[i] == b[j]) {
+                        count++;
+                    }
+                }
+                if (count > max) {
+                    max = count;
+                }
             }
 
-            int ans = n - mx;
-            System.out.println(ans);
+            int e= n - max;
+            System.out.println(e);
         }
         sc.close();
-    }
+
+	}
 }

@@ -11,7 +11,7 @@ class Codechef
 		while(t-->0){
 		    int n=sc.nextInt();
 		    int m=sc.nextInt();
-		    if(m%2==0){
+		    if(m%2==0 && n%2==0){
 		        System.out.println("YES");
 		    }else{
 		       System.out.println("NO"); 

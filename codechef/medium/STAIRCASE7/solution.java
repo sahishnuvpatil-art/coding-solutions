@@ -6,10 +6,6 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		import java.util.*;
-
-public class staircase {
-    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
@@ -35,8 +31,4 @@ public class staircase {
         }
         sc.close();
     }
-}
-
-
-	}
 }

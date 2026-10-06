@@ -9,8 +9,8 @@ class Codechef
 		Scanner sc=new Scanner(System.in);
 		int a=sc.nextInt();
 		int t=a*6;
-		if(t<61)System.out.println("Yes");
-		else System.out.println("no");
+		if(t<61)System.out.println("YES");
+		else System.out.println("NO");
 
 	}
 }

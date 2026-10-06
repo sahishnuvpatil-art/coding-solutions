@@ -8,7 +8,7 @@ class Codechef
 	{
 		Scanner sc=new Scanner(System.in);
 		int a=sc.nextInt();
-		int t=a*6;
+		int t=a*5;
 		if(t<61)System.out.println("YES");
 		else System.out.println("NO");
 

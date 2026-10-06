@@ -57,7 +57,7 @@ If Rahul can write one page in $45$ minutes, then he will write $5$ pages in $22
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T06:50:33.856Z  
+**Submitted:** 2026-10-06T06:51:13.284Z  
 
 ```java
 import java.util.*;
@@ -70,7 +70,7 @@ class Codechef
 	{
 		Scanner sc=new Scanner(System.in);
 		int a=sc.nextInt();
-		int t=a*6;
+		int t=a*5;
 		if(t<61)System.out.println("YES");
 		else System.out.println("NO");
 

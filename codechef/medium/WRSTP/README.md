@@ -80,7 +80,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T16:24:10.526Z  
+**Submitted:** 2026-10-07T16:28:46.283Z  
 
 ```java
 import java.util.*;
@@ -89,9 +89,9 @@ import java.io.*;
 
 class Codechef
 {
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		Scanner sc = new Scanner(System.in);
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner sc = new Scanner(System.in);
 
         int t = sc.nextInt();
 
@@ -130,10 +130,8 @@ class Codechef
                 System.out.println("NO");
             }
         }
-
-	}
+    }
 }
-
 ```
 
 ---

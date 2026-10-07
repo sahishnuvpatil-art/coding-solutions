@@ -80,7 +80,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T16:22:17.215Z  
+**Submitted:** 2026-10-07T16:24:10.526Z  
 
 ```java
 import java.util.*;
@@ -91,7 +91,45 @@ class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		// your code goes here
+		Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+
+        while (t-- > 0)
+        {
+            int n = sc.nextInt();
+            String s = sc.next();
+
+            int a = 0;
+            int b = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                char ch = s.charAt(i);
+
+                if (ch == 'U')
+                    b++;
+                else if (ch == 'D')
+                    b--;
+                else if (ch == 'L')
+                    a--;
+                else if (ch == 'R')
+                    a++;
+            }
+
+            if (a == 0 && b == 0)
+            {
+                System.out.println("NO");
+            }
+            else if (Math.abs(a) == 2 || Math.abs(b) == 2)
+            {
+                System.out.println("YES");
+            }
+            else
+            {
+                System.out.println("NO");
+            }
+        }
 
 	}
 }

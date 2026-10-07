@@ -32,11 +32,8 @@ class Codechef
                     a++;
             }
 
-            if (a == 0 && b == 0)
-            {
-                System.out.println("NO");
-            }
-            else if (Math.abs(a) == 2 || Math.abs(b) == 2)
+           
+            if ((Math.abs(a) == 2 && b == 0) || (Math.abs(b) == 2 && a == 0))
             {
                 System.out.println("YES");
             }

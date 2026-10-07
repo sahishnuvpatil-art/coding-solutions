@@ -80,7 +80,7 @@ YES
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T16:30:01.455Z  
+**Submitted:** 2026-10-07T16:29:03.224Z  
 
 ```java
 import java.util.*;
@@ -117,8 +117,11 @@ class Codechef
                     a++;
             }
 
-           
-            if ((Math.abs(a) == 2 && b == 0) || (Math.abs(b) == 2 && a == 0))
+            if (a == 0 && b == 0)
+            {
+                System.out.println("NO");
+            }
+            else if (Math.abs(a) == 2 || Math.abs(b) == 2)
             {
                 System.out.println("YES");
             }

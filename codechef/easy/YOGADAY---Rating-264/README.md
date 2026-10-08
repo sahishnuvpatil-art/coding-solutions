@@ -78,7 +78,7 @@ Since Chef performed $24$ yoga poses and each Surya Namaskar consists of $12$ po
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T06:30:56.994Z  
+**Submitted:** 2026-10-08T17:52:22.083Z  
 
 ```java
 import java.util.*;
@@ -90,9 +90,8 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 	Scanner sc=new Scanner(System.in);
-	int n=sc.nextInt();
-	System.out.println(n/12);
-
+	int a=sc.nextInt();
+ System.out.println(a/12);
 	}
 }
 

@@ -62,7 +62,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T06:38:35.861Z  
+**Submitted:** 2026-10-08T18:00:37.701Z  
 
 ```java
 import java.util.*;
@@ -75,12 +75,13 @@ class Codechef
 	{
 	    Scanner sc=new Scanner(System.in);
 	    int t=sc.nextInt();
-		while(t-->0){
-		   int points=sc.nextInt();
-		   int st=sc.nextInt();
-		   int val=points/10;
-		   System.out.println(val*st);
-		}
+	    while(t-->0){
+	        int a=sc.nextInt();
+	        int s=sc.nextInt();
+	        int score=a/10;
+	        System.out.println(score*s);
+	    }
+		
 
 	}
 }

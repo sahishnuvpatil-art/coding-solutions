@@ -78,7 +78,7 @@ The convincing power of prosecution is same as that of defense. Thus, the accuse
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-06T06:34:07.426Z  
+**Submitted:** 2026-10-08T17:56:06.248Z  
 
 ```java
 import java.util.*;
@@ -90,10 +90,11 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner sc=new Scanner(System.in);
-		int a=sc.nextInt();
-		int b=sc.nextInt();
-		if(a>=b)System.out.println("YES");
-		else System.out.println("NO");
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		if(x>=y)System.out.println("YES");
+		else System.out.println("No");
+		
 
 	}
 }
